@@ -187,7 +187,7 @@ class AuthController extends Controller
     public function me(Request $request)
     {
         return $this->reply(true, 'User retrieved successfully', 
-            $request->user()->only(['id', 'first_name', 'last_name', 'email'])
+            $request->user()->only(['id', 'first_name', 'last_name', 'email','profile_picture'])
         );
     }
 
