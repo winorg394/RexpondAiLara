@@ -1,0 +1,33 @@
+meta {
+  name: Register With Otp
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{BaseUrl}}api/auth/register-with-otp
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "winorg68@gmail.com",
+    "password": "password123",
+    "password_confirmation": "password123",
+    "otp": "87YDYV",
+    "verification_token": "your_verification_token_here",
+    "device_name": "iPhone 13"
+  }
+}
+
+settings {
+  encodeUrl: false
+}

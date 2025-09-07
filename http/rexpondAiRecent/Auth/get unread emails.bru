@@ -1,0 +1,23 @@
+meta {
+  name: get unread emails
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{BaseUrl}}api/emails/unread?limit=50
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 50
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

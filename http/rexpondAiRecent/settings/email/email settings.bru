@@ -1,0 +1,20 @@
+meta {
+  name: email settings
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BaseUrl}}api/settings/email
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  ~Authorization: Bearer YOUR_AUTH_TOKEN
+}
+
+settings {
+  encodeUrl: false
+}

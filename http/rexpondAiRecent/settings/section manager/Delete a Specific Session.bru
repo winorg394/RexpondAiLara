@@ -1,0 +1,20 @@
+meta {
+  name: Delete a Specific Session
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{BaseUrl}}api/sessions/2
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer YOUR_ACCESS_TOKEN
+}
+
+settings {
+  encodeUrl: false
+}

@@ -1,0 +1,27 @@
+meta {
+  name: update user profile
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{BaseUrl}}api/profile/
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  first_name: John
+  last_name: Doe
+  job_title: Software Developer
+  profile_picture: @file(C:\Users\User\Downloads\Design_sans_titre__1_-removebg-preview.png)
+}
+
+settings {
+  encodeUrl: false
+}

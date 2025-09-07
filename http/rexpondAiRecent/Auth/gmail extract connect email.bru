@@ -1,0 +1,19 @@
+meta {
+  name: gmail extract connect email
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{BaseUrl}}api/auth/google/import
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

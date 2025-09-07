@@ -1,0 +1,21 @@
+meta {
+  name: Revoke All Other Sessions
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BaseUrl}}api/sessions/revoke-others
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer YOUR_ACCESS_TOKEN
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: false
+}

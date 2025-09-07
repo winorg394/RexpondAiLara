@@ -1,0 +1,20 @@
+meta {
+  name: toggle 2FA
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BaseUrl}}api/toggle-two-factor
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  ~Authorization: Bearer YOUR_AUTH_TOKEN
+}
+
+settings {
+  encodeUrl: false
+}

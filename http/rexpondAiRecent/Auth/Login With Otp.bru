@@ -1,0 +1,28 @@
+meta {
+  name: Login With Otp
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{BaseUrl}}api/auth/login-with-otp
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "email": "winorg68@gmail.com",
+    "otp": "TGKNQX",
+    "device_name": "iPhone 13"
+  }
+}
+
+settings {
+  encodeUrl: false
+}

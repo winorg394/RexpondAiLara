@@ -1,0 +1,19 @@
+meta {
+  name: Oauth
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{BaseUrl}}auth/google
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

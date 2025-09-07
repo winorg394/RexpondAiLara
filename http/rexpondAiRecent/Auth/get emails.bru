@@ -1,0 +1,19 @@
+meta {
+  name: get emails
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{BaseUrl}}api/emails
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

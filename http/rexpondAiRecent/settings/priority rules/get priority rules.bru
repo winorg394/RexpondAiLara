@@ -1,0 +1,35 @@
+meta {
+  name: get priority rules
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BaseUrl}}api/priority-rules
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer your_token_here
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "rule_name": "High Priority Clients",
+    "condition": "contains",
+    "keywords": [
+      "vip",
+      "important",
+      "urgent"
+    ],
+    "action": "set_priority",
+    "priority_type": "high_priority"
+  }
+}
+
+settings {
+  encodeUrl: false
+}

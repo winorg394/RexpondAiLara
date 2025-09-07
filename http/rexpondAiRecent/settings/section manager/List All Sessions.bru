@@ -1,0 +1,20 @@
+meta {
+  name: List All Sessions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BaseUrl}}api/sessions
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer YOUR_ACCESS_TOKEN
+}
+
+settings {
+  encodeUrl: false
+}

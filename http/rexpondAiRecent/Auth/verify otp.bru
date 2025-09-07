@@ -1,0 +1,28 @@
+meta {
+  name: verify otp
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BaseUrl}}api/auth/otp/verify
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "email": "winorg68@gmail.com",
+    "otp": "VN9W2U",
+    "is_verification_only": true
+  }
+}
+
+settings {
+  encodeUrl: false
+}

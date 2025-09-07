@@ -1,0 +1,25 @@
+meta {
+  name: welcome-screen toggle
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{BaseUrl}}api/profile/welcome-screen
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "show_welcome_screen": true
+  }
+}
+
+settings {
+  encodeUrl: false
+}

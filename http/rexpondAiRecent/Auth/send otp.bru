@@ -1,0 +1,26 @@
+meta {
+  name: send otp
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BaseUrl}}api/auth/otp/send
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "email": "winorg68@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: false
+}
